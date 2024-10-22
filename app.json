@@ -1,4 +1,17 @@
+
 {
-  "name": "ExTrack",
-  "displayName": "ExTrack"
+  "expo": {
+    "name": "Extrack",
+    "slug": "your-app-slug",
+    "version": "1.0.0",
+    "sdkVersion": "48.0.0",  // Sesuaikan dengan versi SDK yang kamu inginkan
+    "platforms": ["ios", "android", "web"],
+    "assets": [],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    }
+  }
 }

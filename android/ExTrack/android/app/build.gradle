@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.facebook.react'
+
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        applicationId "com.extrack"
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Pengaturan Java compatibility
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_20 // Ganti dengan JavaVersion.VERSION_17 jika diperlukan
+        targetCompatibility JavaVersion.VERSION_20 // Ganti dengan JavaVersion.VERSION_17 jika diperlukan
+    }
+
+    kotlinOptions {
+        jvmTarget = "20" // Ganti dengan "17" jika lebih sesuai
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.10" // Pastikan versi Kotlin sesuai
+    implementation 'com.facebook.react:react-native:+'
+    // Tambahkan dependencies lain yang diperlukan di sini
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
